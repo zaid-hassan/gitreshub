@@ -19,7 +19,7 @@ function App() {
     }
   }
   return (
-    <div className='p-11'>
+    <div className='flex justify-center items-center flex-col p-11 space-y-6'>
       <Search
         inputValue={inputValue}
         setInputValue={setInputValue}

@@ -1,8 +1,7 @@
-import React, { useId, useState } from 'react'
+import React from 'react'
 
 function Search({inputValue, setInputValue, onSearch}) {
-    const inputID = useId();
-    // const [inputValue, setInputValue] = useState('')
+    // const inputID = useId();
 
     const handelSubmit = (e) => {
         e.preventDefault();
@@ -13,14 +12,15 @@ function Search({inputValue, setInputValue, onSearch}) {
         setInputValue(value);
     }
     return (
-        <div className="flex justify-center items-center">
+        <div className="">
             <form className='space-x-4' onSubmit={handelSubmit}>
-                <label htmlFor={inputID}>Search Github:</label>
+                {/* <label htmlFor={inputID}>Search Github:</label> */}
                 <input
-                    id={inputID}
+                    // id={inputID}
                     type="text"
+                    placeholder='Search GitHub'
                     value={inputValue}
-                    className='outline-none border-b-2 border-blue-500 p-1'
+                    className='w-44 outline-none border-b-2 border-blue-500 p-1'
                     onChange={handleInput}
                 />
                 <button className='bg-blue-500 hover:bg-blue-600 border-transparent outline-transparent rounded-lg px-4 py-2 text-sm text-white'>Search</button>
