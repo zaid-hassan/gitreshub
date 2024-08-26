@@ -10,9 +10,11 @@ function App() {
     try {
       const response = await fetch(url);
       if (!response.ok) {
+        setData(null)
         throw new Error(`Response status: ${response.status}`);
       }
       const data = await response.json();
+      console.log(data)
       setData(data);
     } catch (error) {
       console.error(error.message);
